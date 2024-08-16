@@ -4,8 +4,10 @@ import { useFonts } from "expo-font";
 import * as Splashscreen from "expo-splash-screen";
 import { useCallback, useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/native-stack";
-const navigation = createStackNavigator();
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Onboarding } from "./screens/index";
+
+const Stack = createNativeStackNavigator();
 export default function App() {
   const [fontsLoader] = useFonts({
     regular: require("./assets/fonts/regular.otf"),
@@ -26,7 +28,13 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.navigator></Stack.navigator>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Onboard"
+          component={Onboarding}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
