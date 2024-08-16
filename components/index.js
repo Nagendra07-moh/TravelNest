@@ -1,3 +1,3 @@
 import ReusableText from "./Reusable/ReusableText";
-
-export { ReusableText };
+import ReusableBtn from "./Buttons/ReusableBtn";
+export { ReusableBtn, ReusableText };
