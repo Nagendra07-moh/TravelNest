@@ -38,7 +38,7 @@ const BottomTabNavigation = () => {
               <Ionicons
                 name={focused ? "grid" : "grid-outline"}
                 color={focused ? COLORS.red : COLORS.gray}
-                size={26}
+                size={28}
               />
             );
           },
@@ -56,7 +56,7 @@ const BottomTabNavigation = () => {
               <Ionicons
                 name={focused ? "location" : "location-outline"}
                 color={focused ? COLORS.red : COLORS.gray}
-                size={26}
+                size={28}
               />
             );
           },
@@ -78,7 +78,7 @@ const BottomTabNavigation = () => {
                     : "chatbubble-ellipses-outline"
                 }
                 color={focused ? COLORS.red : COLORS.gray}
-                size={26}
+                size={28}
               />
             );
           },
@@ -96,7 +96,7 @@ const BottomTabNavigation = () => {
               <Ionicons
                 name={focused ? "person" : "person-outline"}
                 color={focused ? COLORS.red : COLORS.gray}
-                size={26}
+                size={28}
               />
             );
           },

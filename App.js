@@ -3,7 +3,7 @@ import * as Splashscreen from "expo-splash-screen";
 import { useCallback } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Onboarding } from "./screens/index";
+import { Onboarding, Search } from "./screens/index";
 import BottomTabNavigation from "./Navigation/BottomTabNavigation";
 
 const Stack = createNativeStackNavigator();
@@ -34,8 +34,13 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="BottomTabNavigation"
+          name="Bottom"
           component={BottomTabNavigation}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Search"
+          component={Search}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
