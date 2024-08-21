@@ -3,4 +3,12 @@ import ReusableBtn from "./Buttons/ReusableBtn";
 import HeightSpacer from "./Reusable/HeightSpacer";
 import WidthSpacer from "./Reusable/WidthSpacer";
 import Places from "./Home/Places";
-export { ReusableBtn, ReusableText, HeightSpacer, WidthSpacer, Places };
+import NetworkImage from "./Reusable/NetworkImage";
+export {
+  ReusableBtn,
+  ReusableText,
+  HeightSpacer,
+  WidthSpacer,
+  Places,
+  NetworkImage,
+};
