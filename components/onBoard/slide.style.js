@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
     marginBottom: 60,
+    padding: 20,
   },
 });
 

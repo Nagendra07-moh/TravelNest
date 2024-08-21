@@ -11,6 +11,5 @@ const styles = StyleSheet.create({
     fontFamily: Family,
     fontSize: Size,
     color: Color,
-    padding: 15,
   }),
 });
