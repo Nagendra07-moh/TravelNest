@@ -9,7 +9,7 @@ const Slide = ({ item }) => {
   const navigation = useNavigation();
   return (
     <View>
-      <Image source={item.image} style={styles.image} />
+      <Image source={{ uri: item.image }} style={styles.image} />
       <View style={styles.stack}>
         <ReusableText
           text={item.title}
