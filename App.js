@@ -8,6 +8,7 @@ import {
   Search,
   CountryDetails,
   Recommended,
+  PlaceDetails,
 } from "./screens/index";
 import BottomTabNavigation from "./Navigation/BottomTabNavigation";
 
@@ -56,6 +57,11 @@ export default function App() {
         <Stack.Screen
           name="Recommended"
           component={Recommended}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PlaceDetails"
+          component={PlaceDetails}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
