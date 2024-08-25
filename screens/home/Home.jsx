@@ -7,7 +7,12 @@ import {
 } from "react-native";
 import React from "react";
 import reusable from "../../components/Reusable/reusable.style";
-import { HeightSpacer, Places, ReusableText } from "../../components";
+import {
+  HeightSpacer,
+  Places,
+  ReusableText,
+  Recommendation,
+} from "../../components";
 import { COLORS, SIZES, TEXT } from "../../constants/theme";
 import { AntDesign } from "@expo/vector-icons";
 import styles from "./home.style";
@@ -30,7 +35,7 @@ const Home = ({ navigation }) => {
             <AntDesign name="search1" size={26} />
           </TouchableOpacity>
         </View>
-        <HeightSpacer Height={SIZES.xLarge} />
+        <HeightSpacer Height={SIZES.small} />
         <ReusableText
           text={"Places"}
           Family={"medium"}

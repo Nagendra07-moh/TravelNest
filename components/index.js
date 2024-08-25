@@ -4,6 +4,7 @@ import HeightSpacer from "./Reusable/HeightSpacer";
 import WidthSpacer from "./Reusable/WidthSpacer";
 import Places from "./Home/Places";
 import NetworkImage from "./Reusable/NetworkImage";
+import Recommendation from "./Home/Recommendation";
 export {
   ReusableBtn,
   ReusableText,
@@ -11,4 +12,5 @@ export {
   WidthSpacer,
   Places,
   NetworkImage,
+  Recommendation,
 };
