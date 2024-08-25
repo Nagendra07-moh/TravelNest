@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import reusable from "../Reusable/reusable.style";
 import ReusableText from "../Reusable/ReusableText";
@@ -67,6 +67,30 @@ const Recommendation = () => {
       review: "24455 Reviews",
     },
   ];
+  const flatListRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      scrollNextItem();
+    }, 2000); // change the time interval as needed
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+  const scrollNextItem = () => {
+    if (flatListRef.current) {
+      let nextIndex = currentIndex + 1;
+      if (nextIndex >= recommendations.length) {
+        nextIndex = 0; // Reset to the first item
+      }
+
+      flatListRef.current.scrollToIndex({
+        animated: true,
+        index: nextIndex,
+      });
+
+      setCurrentIndex(nextIndex);
+    }
+  };
 
   return (
     <View style={styles.cointaner}>
@@ -86,6 +110,8 @@ const Recommendation = () => {
       <FlatList
         data={recommendations}
         horizontal
+        ref={flatListRef}
+        pagingEnabled
         keyExtractor={(item) => item._id}
         contentContainerStyle={{ columnGap: SIZES.medium }}
         showsHorizontalScrollIndicator={false}

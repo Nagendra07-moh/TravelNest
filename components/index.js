@@ -5,6 +5,8 @@ import WidthSpacer from "./Reusable/WidthSpacer";
 import NetworkImage from "./Reusable/NetworkImage";
 import Recommendation from "./Home/Recommendation";
 import Rating from "./Reusable/Rating";
+import BestHotels from "./Home/BestHotels";
+import HotelCard from "./Tiles/Hotels/HotelCard";
 
 export {
   ReusableBtn,
@@ -14,4 +16,6 @@ export {
   NetworkImage,
   Recommendation,
   Rating,
+  BestHotels,
+  HotelCard,
 };

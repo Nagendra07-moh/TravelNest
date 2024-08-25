@@ -7,7 +7,12 @@ import {
 } from "react-native";
 import React from "react";
 import reusable from "../../components/Reusable/reusable.style";
-import { HeightSpacer, ReusableText, Recommendation } from "../../components";
+import {
+  HeightSpacer,
+  ReusableText,
+  Recommendation,
+  BestHotels,
+} from "../../components";
 import Places from "../../components/Home/Places";
 import { COLORS, SIZES, TEXT } from "../../constants/theme";
 import { AntDesign } from "@expo/vector-icons";
@@ -31,7 +36,7 @@ const Home = ({ navigation }) => {
             <AntDesign name="search1" size={26} />
           </TouchableOpacity>
         </View>
-        <HeightSpacer Height={SIZES.small} />
+        <HeightSpacer Height={10} />
         <ReusableText
           text={"Places"}
           Family={"medium"}
@@ -40,6 +45,8 @@ const Home = ({ navigation }) => {
         />
         <Places />
         <Recommendation />
+        <HeightSpacer Height={20} />
+        <BestHotels />
       </View>
     </SafeAreaView>
   );
